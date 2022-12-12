@@ -1,19 +1,64 @@
 {
-  "name": "web-based-managment",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "simple-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.3",
+    "font-awesome": "^4.7.0",
+    "joi-browser": "^13.4.0",
+    "lodash": "^4.17.21",
+    "mobx": "^6.5.0",
+    "mobx-react": "^7.3.0",
+    "mobx-react-form": "^3.2.0",
+    "mobx-react-form-devtools": "^1.11.1",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.4",
+    "react-datepicker": "^4.7.0",
+    "react-dom": "^17.0.2",
+    "react-highlight-words": "^0.17.0",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "5.0.0",
+    "react-select": "^5.3.1",
+    "react-select-country-list": "^2.2.3",
+    "react-validation": "^3.0.7",
+    "validatorjs": "^3.22.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "serve": "nodemon server.js",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ghh84/Web-based-managment.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ghh84/Web-based-managment/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/Ghh84/Web-based-managment#readme"
+  "proxy": "http://localhost:8080"
 }
