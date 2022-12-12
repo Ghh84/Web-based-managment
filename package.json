@@ -1,0 +1,19 @@
+{
+  "name": "web-based-managment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghh84/Web-based-managment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ghh84/Web-based-managment/issues"
+  },
+  "homepage": "https://github.com/Ghh84/Web-based-managment#readme"
+}
