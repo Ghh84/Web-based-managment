@@ -91,7 +91,28 @@ const updateBalanceFromRequest = (req, res) => {
   }
 
 };
-
+const addBalance = async (req, res) => {
+  let values=[]
+  for (const [key, value] of Object.entries(req.body)) {
+    console.log(`${key}: ${value}`);
+    values.push(value)
+  }
+  console.log(values)
+  
+  connection.query("INSERT INTO  balance (userId,USDbalance,localBalance,localCurrency,comment) VALUES (?)",[values],(err,row)=>{
+    if(err){
+      console.log('error adding to users',err)
+    }
+    else{
+      console.log('returned records',row)
+      res.status(200).send(row)
+    }
+  }) 
+ 
+};
+const deleteBalance = (req, res) => {
+  
+};
 module.exports= {
   updateBalance,
   getBalance,
