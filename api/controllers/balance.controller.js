@@ -56,6 +56,41 @@ const updateBalance = (req, res) => {
   
   
 };
+const updateBalanceFromRequest = (req, res) => {
+  let columns=[],values=[]
+  for (const [key, value] of Object.entries(req.body)) {
+    console.log(`${key}: ${value}`);
+    values.push(value)
+  }
+  console.log('values',values)
+  if(values[3]=='United States Dollar'){
+    connection.query("UPDATE  balance SET USDbalance=USDbalance+?,comment=? where userId=?",
+    [values[2],values[4],values[1]],(err,row)=>{
+      if(err){
+        console.log('error adding to transactions',err)
+        res.status(400).send('Error updating the transaction')
+      }
+      else{
+        console.log('returned records',row)
+        res.status(200).send(row)
+      }
+    }) 
+  }
+  else{
+    connection.query("UPDATE  balance SET localBalance=localBalance+?,comment=? where userId=?",
+    [values[2],values[4],values[1]],(err,row)=>{
+      if(err){
+        console.log('error adding to transactions',err)
+        res.status(400).send('Error updating the transaction')
+      }
+      else{
+        console.log('returned records',row)
+        res.status(200).send(row)
+      }
+    }) 
+  }
+
+};
 
 module.exports= {
   updateBalance,
